@@ -1,1 +1,51 @@
-// Your code here
+function mapToNegativize(sourceArray) {
+  const result = [];
+  for (let i = 0; i < sourceArray.length; i++) {
+    result.push(-sourceArray[i])
+  }
+  return result;
+}
+
+function mapToNoChange(sourceArray) {
+  const result = [];
+  for (let i = 0; i < sourceArray.length; i++) {
+    result.push(sourceArray[i])
+  }
+  return result;
+}
+
+function mapToDouble(sourceArray) {
+  const result = [];
+  for (let i = 0; i < sourceArray.length; i++) {
+    result.push(sourceArray[i] * 2)
+  }
+  return result;
+}
+
+function mapToSquare(sourceArray) {
+  const result = [];
+  for (let i = 0; i < sourceArray.length; i++) {
+    result.push(sourceArray[i] ** 2)
+  }
+  return result;
+}
+
+function reduceToTotal(sourceArray, startingPoint = 0) {
+  let result = startingPoint;
+  for (let i = 0; i < sourceArray.length; i++) {
+    result += sourceArray[i];
+  }
+  return result;
+}
+
+function reduceToAllTrue(sourceArray) {
+  if (sourceArray.every(element => !!element)) {
+    return true
+  } else { return false };
+}
+
+function reduceToAnyTrue(sourceArray) {
+  if (sourceArray.every(element => !element)) {
+    return false
+  } else { return true };
+}
