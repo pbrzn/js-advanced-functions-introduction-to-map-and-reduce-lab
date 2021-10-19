@@ -39,13 +39,23 @@ function reduceToTotal(sourceArray, startingPoint = 0) {
 }
 
 function reduceToAllTrue(sourceArray) {
-  if (sourceArray.every(element => !!element)) {
-    return true
-  } else { return false };
+  let result = true;
+  for (let i = 0; i < sourceArray.length; i++) {
+    result = !!result && !!sourceArray[i]
+  }
+  return result;
+  // if (sourceArray.every(element => !!element)) {
+  //   return true
+  // } else { return false };
 }
 
 function reduceToAnyTrue(sourceArray) {
-  if (sourceArray.every(element => !element)) {
-    return false
-  } else { return true };
+  let result = false;
+  for (let i = 0; i < sourceArray.length; i++) {
+    result = result || !!sourceArray[i]
+  }
+  return result;
+  // if (sourceArray.every(element => !element)) {
+  //   return false
+  // } else { return true };
 }
